@@ -12,11 +12,6 @@ import Metal
 import MetalKit
 import simd
 
-// The 256 byte aligned size of our uniform structure
-let alignedUniformsSize = (MemoryLayout<Uniforms>.size & ~0xFF) + 0x100
-
-let maxBuffersInFlight = 3
-
 enum RendererError: Error {
     case badVertexDescriptor
 }
